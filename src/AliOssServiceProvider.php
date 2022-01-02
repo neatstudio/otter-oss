@@ -85,17 +85,6 @@ class AliOssServiceProvider extends ServiceProvider
                                   'query' => [
                                       'DurationSeconds' => $expired,
                                       'RoleArn'         => $arn,
-                                      'RoleSessionName' => "gouki",
-                                      'Policy'          => json_encode([
-                                          "Version"   => "1",
-                                          "Statement" => [
-                                              [
-                                                  "Action"   => ["oss:*"],
-                                                  "Resource" => ['*'],
-                                                  "Effect"   => "Allow"
-                                              ]
-                                          ]
-                                      ])
                                   ],
                               ])
                               ->request();

@@ -18,7 +18,7 @@ class UploadFile  extends AbstractPlugin
      */
     public function getMethod()
     {
-        return 'putFile';
+        return 'uploadFile';
     }
 
     /**
@@ -35,7 +35,7 @@ class UploadFile  extends AbstractPlugin
             return false;
         }
 
-        if (! method_exists($this->filesystem->getAdapter(), 'putFile')) {
+        if (! method_exists($this->filesystem->getAdapter(), 'uploadFile')) {
             return false;
         }
 
