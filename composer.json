@@ -1,6 +1,6 @@
 {
-    "name":"otter/oss",
-    "description":"多种storage吧？",
+    "name":"neatstudio/otter-oss",
+    "description":"alioss for laravel",
     "type":"library",
     "keywords":[
         "laravel",

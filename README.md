@@ -1,5 +1,9 @@
 #代码来自于 https://github.com/apollopy/flysystem-aliyun-oss
 
+#说明
+* 本来叫：otter/oss，但otter已经有人用了。只能用neatstudio了
+* 该代码本来也就是自用
+
 #使用方式（本地模式）
 * 将代码拷到指定目录，如根目录下 的xxx，当前文件的路径 为 xxx/oss
 * 在composer.json里加入
@@ -16,7 +20,7 @@
 ```
 * 在composer.json的require中加入
 ```
-"otter/sts-oss":"^1.0",
+"neatstudio/otter-oss":"^1.0",
 ```
 * 执行composer update即可
 
@@ -55,3 +59,13 @@ OSS_INTERNAL_ENDPOINT=oss-cn-shanghai-internal.aliyuncs.com
 OSS_BUCKET=xx-public
 OSS_PUBLIC_URL=//xx--shanghai.aliyuncs.com/
 ```
+
+### 其他用法
+```php
+$adapter = new AliOssAdapter($config);
+$flysystem = new League\Flysystem\Filesystem($adapter);
+```
+```php
+Storage::disk('oss')->xxx()
+```
+
